@@ -17,10 +17,11 @@
     <title>StepIn</title>
   </head>
   <body class="bg-gray-100">
+    <!-- Navigation Menu -->
     <nav id="navbar" class="w-full fixed top-0 z-20 bg-gray-100 h-[50px]">
       <ul
         id="sidebar"
-        class="fixed hidden h-screen top-0 left-0 flex-col w-[250px] items-center justify-start z-10 bg-gray-100 max-[400px]:w-full shadow-2xl"
+        class="fixed hidden h-screen top-0 left-0 flex-col w-[250px] items-center justify-start z-10 bg-gray-100 max-[400px]:w-full shadow-2xl backdrop-blur-sm"
       >
         <!-- Logo -->
         <button
@@ -354,8 +355,9 @@
       </section>
     </header>
 
+    <!-- Technology Section -->
     <section id="technology" class="">
-      <div class="container mx-auto mt-20 text-center">
+      <div class="container mx-auto my-20 text-center">
         <h2 class="text-5xl font-bold font-bebas">The Sole of Innovation</h2>
         <p class="text-center text-2xl mt-5">
           Our technology is the secret behind every step you take. Discover what
@@ -370,7 +372,7 @@
             >
               <i class="fa-solid fa-feather-pointed text-3xl text-cyan-400"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Cushioning Technology</h3>
+            <h3 class="text-2xl font-bold">Cushioning Technology</h3>
             <p class="text-gray-700">
               Experience unparalleled comfort with our advanced cushioning
               systems that absorb impact and provide support for all-day wear.
@@ -386,7 +388,7 @@
                 class="fa-solid fa-shoe-prints -rotate-90 text-3xl text-cyan-400"
               ></i>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Dynamic Fit System</h3>
+            <h3 class="text-2xl font-bold">Dynamic Fit System</h3>
             <p class="text-gray-700">
               The shoe's structure adapts to your foot's unique shape and
               movement for a persomalized, secure fit that feels custom-made.
@@ -400,7 +402,7 @@
             >
               <i class="fa-solid fa-fan text-3xl text-cyan-400"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Breathable Weave</h3>
+            <h3 class="text-2xl font-bold">Breathable Weave</h3>
             <p class="text-gray-700">
               Our innovative upper material promotes maximum ventilation,
               keeping your feet cool, dry and comfortable all day long.
@@ -409,7 +411,102 @@
         </div>
       </div>
     </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 bg-gray-200">
+      <div class="tab-section container mx-auto">
+        <div
+          class="flex flex-row px-4 gap-6 border-b border-gray-200 justify-center"
+        >
+          <button
+            data-tab-target="#athletics"
+            class="text-md font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
+          >
+            Athletics
+          </button>
+          <button
+            data-tab-target="#comfort"
+            class="text-md font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
+          >
+            Comfort
+          </button>
+          <button
+            data-tab-target="#fashion"
+            class="text-md font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
+          >
+            Fashion
+          </button>
+        </div>
+
+        <div class="mt4">
+          <div id="athletics" class="tab-content text-gray-700 hidden">
+            <h2 class="font-bold text-3xl mb-4">Athletics</h2>
+            <p class="text-xl">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum sed
+              expedita asperiores recusandae possimus, aspernatur iure, aut
+              maxime tempore atque ad tenetur sequi accusantium error sapiente.
+              Laudantium odio dolorem numquam.
+            </p>
+          </div>
+          <div id="comfort" class="tab-content text-gray-700 hidden">
+            <h2 class="font-bold text-3xl mb-4">Comfort</h2>
+            <p class="text-xl">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum sed
+              expedita asperiores recusandae possimus, aspernatur iure, aut
+              maxime tempore atque ad tenetur sequi accusantium error sapiente.
+              Laudantium odio dolorem numquam.
+            </p>
+          </div>
+          <div id="fashion" class="tab-content text-gray-700 hidden">
+            <h2 class="font-bold text-3xl mb-4">Fashion</h2>
+            <p class="text-xl">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum sed
+              expedita asperiores recusandae possimus, aspernatur iure, aut
+              maxime tempore atque ad tenetur sequi accusantium error sapiente.
+              Laudantium odio dolorem numquam.
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="relative overflow-hidden">
+          <div id="athletics" class="absolute top-0 right-0 mt-4 mr-4">
+            Lorem ipsum dolor sit amet consectetur i dont know, adipisicing
+            elit. Consectetur sed harum fugit rerum impedit deleniti
+            consequuntur vitae sunt ullam aperiam iste voluptas error enim
+            exercitationem veritatis quos provident hic quo minus deserunt,
+            atque aspernatur perspiciatis sapiente alias! Aliquid facere
+            provident quae nostrum libero, quas sequi? Exercitationem, ut
+            consectetur cumque consequuntur quasi nobis perferendis excepturi!
+            Id, omnis consequuntur. Aliquid, dolores velit.
+          </div>
+          <div
+            id="comfort"
+            class="absolute top-0 right-0 mt-4 mr-4 transform translate-x-[100%]"
+          >
+            Lorem ipsum dolor sit amet consectetur but i actually know,
+            adipisicing elit. Consectetur sed harum fugit rerum impedit deleniti
+            consequuntur vitae sunt ullam aperiam iste voluptas error enim
+            exercitationem veritatis quos provident hic quo minus deserunt,
+            atque aspernatur perspiciatis sapiente alias! Aliquid facere
+            provident quae nostrum libero, quas sequi? Exercitationem, ut
+            consectetur cumque consequuntur quasi nobis perferendis excepturi!
+            Id, omnis consequuntur. Aliquid, dolores velit.
+          </div>
+          <div
+            id="fashion"
+            class="absolute top-0 right-0 mt-4 mr-4 transform translate-x-[100%]"
+          >
+            Lorem ipsum dolor sit amet consectetur but do i really know,
+            adipisicing elit. Consectetur sed harum fugit rerum impedit deleniti
+            consequuntur vitae sunt ullam aperiam iste voluptas error enim
+            exercitationem veritatis quos provident hic quo minus deserunt,
+            atque aspernatur perspiciatis sapiente alias! Aliquid facere
+            provident quae nostrum libero, quas sequi? Exercitationem, ut
+            consectetur cumque consequuntur quasi nobis perferendis excepturi!
+            Id, omnis consequuntur. Aliquid, dolores velit.
+          </div>
+        </div> -->
+      </div>
+    </section>
   </body>
 </html>
-
-<i class="fa-solid fa-shoe-prints"></i>
