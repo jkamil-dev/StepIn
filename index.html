@@ -10,10 +10,14 @@
       type="image/x-icon"
     />
     <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/de16b8ca46.js"
+      crossorigin="anonymous"
+    ></script>
     <title>StepIn</title>
   </head>
   <body class="bg-gray-100">
-    <nav id="navbar" class="w-full fixed top-0 z-20 bg-gray-100 h-[50px] ">
+    <nav id="navbar" class="w-full fixed top-0 z-20 bg-gray-100 h-[50px]">
       <ul
         id="sidebar"
         class="fixed hidden h-screen top-0 left-0 flex-col w-[250px] items-center justify-start z-10 bg-gray-100 max-[400px]:w-full shadow-2xl"
@@ -50,7 +54,7 @@
             <button
               class="peer cursor-pointer hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-150 transition duration-150 inline"
             >
-              Technology
+              Shop
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -96,7 +100,7 @@
             <a
               href="#shop"
               class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
-              >Shop</a
+              >Technology</a
             >
           </li>
           <li class="h-full">
@@ -163,7 +167,7 @@
       </ul>
 
       <ul
-        class="desktop-nav flex container mx-auto justify-between items-center h-[50px] px-4 "
+        class="desktop-nav flex container mx-auto justify-between items-center h-[50px] px-4"
       >
         <!-- Logo -->
         <li class="order-2 md:order-1 flex items-center">
@@ -200,12 +204,21 @@
               >Home
             </a>
           </li>
+
+          <li class="h-full">
+            <a
+              href="#shop"
+              class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
+              >Technology</a
+            >
+          </li>
+
           <ul class="h-full relative group px-4 py-2 flex items-center">
             <button
               class="peer cursor-pointer hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-150 transition duration-150 inline"
             >
               <div class="">
-                Technology
+                Shop
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -223,7 +236,7 @@
               </div>
             </button>
             <div
-              class="absolute top-full left-0 p-3 mt-1 w-full space-y-3 shadow-sm bg-gray-200 rounded-md scale-y-0 group-hover:scale-y-100 peer-hover:scale-y-100 origin-top duration-500"
+              class="absolute top-full left-0 p-3 mt-1 space-y-3 shadow-sm bg-gray-200 rounded-md scale-y-0 group-hover:scale-y-100 peer-hover:scale-y-100 origin-top duration-500"
             >
               <li class="">
                 <a
@@ -248,13 +261,7 @@
               </li>
             </div>
           </ul>
-          <li class="h-full">
-            <a
-              href="#shop"
-              class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
-              >Shop</a
-            >
-          </li>
+
           <li class="h-full">
             <a
               href="#Testimonials"
@@ -320,12 +327,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="hero" class="bg-[url('https://res.cloudinary.com/drfbfalpr/image/upload/v1760453326/shoes-1_yrfieu.jpg')] bg-cover bg-center bg-blend-overlay bg-gray-800 bg-opacity-50">
+    <header
+      id="hero"
+      class="bg-[url('https://res.cloudinary.com/drfbfalpr/image/upload/v1760453326/shoes-1_yrfieu.jpg')] bg-cover bg-center bg-blend-overlay bg-gray-800 bg-opacity-50"
+    >
       <section
-        class=" h-screen container mx-auto rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center "
+        class="h-screen container mx-auto rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center"
       >
         <div class="md:w-1/2 p-8">
-          <h1 class="text-7xl font-bebas tracking-wider font-bold mb-10 text-cyan-400">
+          <h1
+            class="text-7xl font-bebas tracking-wider font-bold mb-10 text-cyan-400"
+          >
             Step Into Comfort and Style
           </h1>
           <p class="text-white mb-10 tracking-wider text-2xl font-dmsans">
@@ -336,11 +348,68 @@
           <a
             href="#shop"
             class="bg-cyan-500 text-white px-8 py-2 rounded-md hover:bg-cyan-600 transition duration-300"
-            >Shop Now</a
-          >
-        </div>
+            >Shop Now
+          </a>
         </div>
       </section>
     </header>
+
+    <section id="technology" class="">
+      <div class="container mx-auto mt-20 text-center">
+        <h2 class="text-5xl font-bold font-bebas">The Sole of Innovation</h2>
+        <p class="text-center text-2xl mt-5">
+          Our technology is the secret behind every step you take. Discover what
+          makes our products exceptional.
+        </p>
+        <div class="grid grid-cols-3 gap-8">
+          <div
+            class="card p-6 m-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
+          >
+            <div
+              class="h-20 w-20 bg-cyan-200/20 flex items-center justify-center rounded-full"
+            >
+              <i class="fa-solid fa-feather-pointed text-3xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Cushioning Technology</h3>
+            <p class="text-gray-700">
+              Experience unparalleled comfort with our advanced cushioning
+              systems that absorb impact and provide support for all-day wear.
+            </p>
+          </div>
+          <div
+            class="card p-6 m-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
+          >
+            <div
+              class="h-20 w-20 bg-cyan-200/20 flex items-center justify-center rounded-full"
+            >
+              <i
+                class="fa-solid fa-shoe-prints -rotate-90 text-3xl text-cyan-400"
+              ></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Dynamic Fit System</h3>
+            <p class="text-gray-700">
+              The shoe's structure adapts to your foot's unique shape and
+              movement for a persomalized, secure fit that feels custom-made.
+            </p>
+          </div>
+          <div
+            class="card p-6 m-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
+          >
+            <div
+              class="h-20 w-20 bg-cyan-200/20 flex items-center justify-center rounded-full"
+            >
+              <i class="fa-solid fa-fan text-3xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Breathable Weave</h3>
+            <p class="text-gray-700">
+              Our innovative upper material promotes maximum ventilation,
+              keeping your feet cool, dry and comfortable all day long.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
+
+<i class="fa-solid fa-shoe-prints"></i>
