@@ -422,6 +422,18 @@
   .resize {
     resize: both;
   }
+  .scroll-mt-14 {
+    scroll-margin-top: calc(var(--spacing) * 14);
+  }
+  .scroll-mt-\[50px\] {
+    scroll-margin-top: 50px;
+  }
+  .scroll-mt-\[52px\] {
+    scroll-margin-top: 52px;
+  }
+  .scroll-mt-\[55px\] {
+    scroll-margin-top: 55px;
+  }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

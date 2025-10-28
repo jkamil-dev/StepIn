@@ -18,7 +18,11 @@
   </head>
   <body class="bg-gray-100">
     <!-- Navigation Menu -->
-    <nav id="navbar" class="w-full fixed top-0 z-20 bg-gray-100 h-[50px]">
+    <nav
+      id="navbar"
+      class="w-full fixed top-0 z-20 bg-gray-100 h-[50px] shadow-lg"
+    >
+      <!-- Sidebar Navigation Bar -->
       <ul
         id="sidebar"
         class="fixed hidden h-screen top-0 left-0 flex-col w-[250px] items-center justify-start z-10 bg-gray-100 max-[400px]:w-full shadow-2xl backdrop-blur-sm"
@@ -51,62 +55,23 @@
               >Home
             </a>
           </li>
-          <ul class="h-full relative group px-4 py-2 flex items-center">
-            <button
-              class="peer cursor-pointer hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-150 transition duration-150 inline"
-            >
-              Shop
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 inline"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </button>
-            <div
-              class="absolute top-0 left-full p-3 mt-1 w-full space-y-3 shadow-sm bg-gray-200 rounded-md scale-x-0 group-hover:scale-x-100 peer-hover:scale-x-100 origin-left duration-500"
-            >
-              <li class="">
-                <a
-                  href="#athletics"
-                  class="px-4 py-2 flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
-                  >Athletics</a
-                >
-              </li>
-              <li class="">
-                <a
-                  href="#comfort"
-                  class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
-                  >Comfort</a
-                >
-              </li>
-              <li class="">
-                <a
-                  href="#fashion"
-                  class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
-                  >Fashion</a
-                >
-              </li>
-            </div>
-          </ul>
           <li class="h-full">
             <a
-              href="#shop"
+              href="#technology"
               class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
               >Technology</a
             >
           </li>
           <li class="h-full">
             <a
-              href="#Testimonials"
+              href="#shop"
+              class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
+              >Shop
+            </a>
+          </li>
+          <li class="h-full">
+            <a
+              href="#testimonials"
               class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
               >Testimonials</a
             >
@@ -119,58 +84,12 @@
             >
           </li>
         </div>
-        <!-- <div class="icons flex flex-row gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 cursor-pointer hover:text-cyan-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-            />
-          </svg>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 cursor-pointer hover:text-cyan-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-            />
-          </svg>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 cursor-pointer hover:text-cyan-400"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-            />
-          </svg>
-        </div> -->
       </ul>
 
+      <!-- Desktop Navigation Bar -->
       <ul
         class="desktop-nav flex container mx-auto justify-between items-center h-[50px] px-4"
       >
-        <!-- Logo -->
         <li class="order-2 md:order-1 flex items-center">
           <img
             src="https://res.cloudinary.com/drfbfalpr/image/upload/v1761327866/images__1__2-removebg-preview_zxzxev.png"
@@ -205,67 +124,23 @@
               >Home
             </a>
           </li>
-
           <li class="h-full">
             <a
-              href="#shop"
+              href="#technology"
               class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
               >Technology</a
             >
           </li>
-
-          <ul class="h-full relative group px-4 py-2 flex items-center">
-            <button
-              class="peer cursor-pointer hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-150 transition duration-150 inline"
-            >
-              <div class="">
-                Shop
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6 inline-block"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </div>
-            </button>
-            <div
-              class="absolute top-full left-0 p-3 mt-1 space-y-3 shadow-sm bg-gray-200 rounded-md scale-y-0 group-hover:scale-y-100 peer-hover:scale-y-100 origin-top duration-500"
-            >
-              <li class="">
-                <a
-                  href="#athletics"
-                  class="px-4 py-2 flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
-                  >Athletics</a
-                >
-              </li>
-              <li class="">
-                <a
-                  href="#comfort"
-                  class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
-                  >Comfort</a
-                >
-              </li>
-              <li class="">
-                <a
-                  href="#fashion"
-                  class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition duration-150"
-                  >Fashion</a
-                >
-              </li>
-            </div>
-          </ul>
-
           <li class="h-full">
             <a
-              href="#Testimonials"
+              href="#shop"
+              class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
+              >Shop</a
+            >
+          </li>
+          <li class="h-full">
+            <a
+              href="#testimonials"
               class="px-4 py-2 h-full flex items-center hover:text-cyan-500 hover:underline hover:underline-offset-4 hover:decoration-cyan-500 transition-colors duration-150"
               >Testimonials</a
             >
@@ -329,7 +204,7 @@
 
     <!-- Hero Section -->
     <header
-      id="hero"
+      id="home"
       class="bg-[url('https://res.cloudinary.com/drfbfalpr/image/upload/v1760453326/shoes-1_yrfieu.jpg')] bg-cover bg-center bg-blend-overlay bg-gray-800 bg-opacity-50"
     >
       <section
@@ -356,8 +231,8 @@
     </header>
 
     <!-- Technology Section -->
-    <section id="technology" class="">
-      <div class="container mx-auto my-20 text-center">
+    <section id="technology" class="scroll-mt-[50px] py-20">
+      <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold font-bebas">The Sole of Innovation</h2>
         <p class="text-center text-2xl mt-5">
           Our technology is the secret behind every step you take. Discover what
@@ -413,7 +288,7 @@
     </section>
 
     <!-- Shop Section -->
-    <section id="shop" class="py-20 bg-gray-200">
+    <section id="shop" class="py-20 bg-gray-200 scroll-mt-[50px]">
       <div class="tab-section container mx-auto">
         <div
           class="flex flex-row px-4 gap-6 border-b border-gray-200 justify-center"
@@ -473,8 +348,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="">
-      <div class="container mx-auto my-20">
+    <section id="testimonials" class="scroll-mt-[50px] py-20">
+      <div class="container mx-auto">
         <h2 class="text-3xl font-bold font-bebas text-center">
           What Our Customers Say
         </h2>
