@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function productCard(product) {
     return `
       <div
-      class="bg-gray-200 rounded-xl overflow-hidden shadow-xl group flex flex-col max-w-[250px]"
+      class="bg-gray-200 rounded-xl overflow-hidden shadow-2xl group flex flex-col w-[250px] mx-auto"
     >
       <div class="overflow-hidden relative">
         <img
