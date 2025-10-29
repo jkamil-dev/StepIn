@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <button
           onclick="productModal(${product.id})"
-          class="w-full py-3 text-cyan-600 border border-cyan-500 font-semibold rounded-xl hover:bg-cyan-600 hover:text-gray-100 transi duration-150 shadow-lg active:scale-[0.98]"
+          class="w-full py-3 text-cyan-600 border border-cyan-500 font-semibold rounded-xl hover:bg-cyan-500 hover:text-gray-100 transi duration-150 shadow-lg active:scale-[0.98]"
         >
           Product Details
         </button>
