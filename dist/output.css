@@ -432,6 +432,9 @@
   .max-w-\[200px\] {
     max-width: 200px;
   }
+  .max-w-\[250px\] {
+    max-width: 250px;
+  }
   .max-w-lg {
     max-width: var(--container-lg);
   }
@@ -506,6 +509,12 @@
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .gap-32 {
     gap: calc(var(--spacing) * 32);
