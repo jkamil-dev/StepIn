@@ -251,13 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
       description: "Black designer shoes with a bold, modern look."
     }
   ]
-};
+  };
 
   // Creating the Product Cards
   function productCard(product) {
     return `
       <div
-      class="bg-gray-200 rounded-xl overflow-hidden shadow-2xl group flex flex-col w-[250px] mx-auto"
+      class="bg-gray-200 rounded-xl overflow-hidden shadow-2xl group flex flex-col w-full max-w-[250px] mx-auto"
     >
       <div class="overflow-hidden relative">
         <img

@@ -118,7 +118,7 @@
           </svg>
         </button>
         <div
-          class="flex items-center gap-6 maxmd text-2xl h-full max-md:hidden md:order-2"
+          class="md:flex items-center sm:gap-1 text-2xl h-full hidden md:order-2"
         >
           <li class="h-full">
             <a
@@ -195,7 +195,7 @@
       class="bg-[url('https://res.cloudinary.com/drfbfalpr/image/upload/w_auto/q_auto/f_auto/v1760453326/shoes-1_yrfieu.jpg')] bg-cover bg-center bg-blend-overlay bg-gray-800 bg-opacity-50"
     >
       <section
-        class="h-screen container mx-auto rounded-lg shadow-lg overflow-hidden flex items-center justify-center"
+        class="h-screen mx-auto overflow-hidden flex items-center justify-center"
       >
         <div class="text-center p-8 w-full md:w-3/4 mx-aut">
           <h1
@@ -227,9 +227,9 @@
           Our technology is the secret behind every step you take. Discover what
           makes our products exceptional.
         </p>
-        <div class="grid grid-cols-1 mt-5 md:grid-cols-3 gap-4 md:gap-8">
+        <div class="grid grid-cols-1 mt-5 md:grid-cols-3 gap-4 sm:gap-6">
           <div
-            class="card p-6 m-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
+            class="card p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
           >
             <div
               class="h-20 w-20 bg-cyan-200/20 flex items-center justify-center rounded-full"
@@ -237,13 +237,13 @@
               <i class="fa-solid fa-feather-pointed text-3xl text-cyan-400"></i>
             </div>
             <h3 class="text-2xl font-bold">Cushioning Technology</h3>
-            <p class="text-gray-700">
+            <p class="text-gray-700 text-sm sm:text-base">
               Experience unparalleled comfort with our advanced cushioning
               systems that absorb impact and provide support for all-day wear.
             </p>
           </div>
           <div
-            class="card p-6 m-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
+            class="card p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
           >
             <div
               class="h-20 w-20 bg-cyan-200/20 flex items-center justify-center rounded-full"
@@ -253,13 +253,13 @@
               ></i>
             </div>
             <h3 class="text-2xl font-bold">Dynamic Fit System</h3>
-            <p class="text-gray-700">
+            <p class="text-gray-700 text-sm sm:text-base">
               The shoe's structure adapts to your foot's unique shape and
               movement for a persomalized, secure fit that feels custom-made.
             </p>
           </div>
           <div
-            class="card p-6 m-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
+            class="card p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center gap-4"
           >
             <div
               class="h-20 w-20 bg-cyan-200/20 flex items-center justify-center rounded-full"
@@ -267,7 +267,7 @@
               <i class="fa-solid fa-fan text-3xl text-cyan-400"></i>
             </div>
             <h3 class="text-2xl font-bold">Breathable Weave</h3>
-            <p class="text-gray-700">
+            <p class="text-gray-700 text-sm sm:text-base">
               Our innovative upper material promotes maximum ventilation,
               keeping your feet cool, dry and comfortable all day long.
             </p>
@@ -284,19 +284,19 @@
         >
           <button
             data-tab-target="#athletics"
-            class="text-md font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
+            class="text-md sm:text-lg font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
           >
             Athletics
           </button>
           <button
             data-tab-target="#comfort"
-            class="text-md font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
+            class="text-md sm:text-lg font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
           >
             Comfort
           </button>
           <button
             data-tab-target="#fashion"
-            class="text-md font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
+            class="text-md sm:text-lg font-bold leading-normal tracking-[0.015em] pt-4 pb-[10px] cursor-pointer hover:text-cyan-500"
           >
             Fashion
           </button>
@@ -306,7 +306,7 @@
           <div
             id="athletics"
             data-content="athletics"
-            class="tab-content grid grid-cols-1 md:grid-cols-4 justify-center items-center gap-10"
+            class="tab-content grid grid-cols-1 md:max-lg:grid-cols-2 lg:max-xl:grid-cols-3 xl:grid-cols-4 justify-center items-center gap-10"
           >
             <p class="text-xl text-center text-gray-500">
               Loading Athletic shoes...
@@ -316,7 +316,7 @@
           <div
             id="comfort"
             data-content="comfort"
-            class="tab-content grid grid-cols-1 md:grid-cols-4 justify-center items-center gap-10"
+            class="tab-content grid grid-cols-1 md:max-lg:grid-cols-2 lg:max-xl:grid-cols-3 xl:grid-cols-4 justify-center items-center gap-10"
           >
             <p class="text-xl text-center text-gray-500">
               Loading Comfort shoes...
@@ -326,7 +326,7 @@
           <div
             id="fashion"
             data-content="fashion"
-            class="tab-content grid grid-cols-1 md:grid-cols-4 justify-center items-center gap-10"
+            class="tab-content grid grid-cols-1 md:max-lg:grid-cols-2 lg:max-xl:grid-cols-3 xl:grid-cols-4 justify-center items-center gap-10"
           >
             <p class="text-xl text-center text-gray-500">
               Loading Fashion shoes...
@@ -346,7 +346,7 @@
           Hear from our satisfied customers who have experienced the StepIn
           difference.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
           <div
             class="testimonial-card p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 h-[150px] flex justify-center flex-col mx-4"
           >
