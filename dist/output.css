@@ -370,6 +370,9 @@
   .min-h-20 {
     min-height: calc(var(--spacing) * 20);
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -445,6 +448,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -867,6 +873,11 @@
   .sm\:mx-0 {
     @media (width >= 40rem) {
       margin-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:w-1\/2 {
+    @media (width >= 40rem) {
+      width: calc(1/2 * 100%);
     }
   }
   .sm\:gap-1 {
