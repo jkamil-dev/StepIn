@@ -300,6 +300,9 @@
   .mt-auto {
     margin-top: auto;
   }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
@@ -373,6 +376,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
@@ -542,6 +548,12 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-\[url\(\'https\:\/\/res\.cloudinary\.com\/drfbfalpr\/image\/upload\/w_250\/q_auto\/f_auto\/v1761327866\/images__1__2-removebg-preview_zxzxev\.pn\'\)\] {
+    background-image: url('https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761327866/images__1__2-removebg-preview_zxzxev.pn');
+  }
+  .bg-\[url\(\'https\:\/\/res\.cloudinary\.com\/drfbfalpr\/image\/upload\/w_250\/q_auto\/f_auto\/v1761327866\/images__1__2-removebg-preview_zxzxev\.png\'\)\] {
+    background-image: url('https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761327866/images__1__2-removebg-preview_zxzxev.png');
   }
   .bg-\[url\(\'https\:\/\/res\.cloudinary\.com\/drfbfalpr\/image\/upload\/w_auto\/q_auto\/f_auto\/v1760453326\/shoes-1_yrfieu\.jpg\'\)\] {
     background-image: url('https://res.cloudinary.com/drfbfalpr/image/upload/w_auto/q_auto/f_auto/v1760453326/shoes-1_yrfieu.jpg');
@@ -920,6 +932,12 @@
       gap: calc(var(--spacing) * 6);
     }
   }
+  .sm\:text-2xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .sm\:text-base {
     @media (width >= 40rem) {
       font-size: var(--text-base);
@@ -1077,6 +1095,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-gray-900) 50%, transparent);
       }
+    }
+  }
+  .dark\:bg-\[url\(\'\'\)\] {
+    @media (prefers-color-scheme: dark) {
+      background-image: url('');
     }
   }
   .dark\:text-cyan-100 {
