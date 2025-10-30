@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Shop Section Tab Layout
   const categories = document.querySelectorAll('[data-tab-target]');
-  const activeClass = "text-cyan-500 border-b-2 border-cyan-500 hover:text-cyan-600";
+  const activeClass = "text-cyan-500 border-b-2 border-cyan-500 hover:text-cyan-600 dark:text-cyan-400 dark:border-cyan-400 dark:hover:text-cyan-300";
 
   // This sets the first tab as active on page load
   categories[0].classList.add(...activeClass.split(' '));
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function productCard(product) {
     return `
       <div
-      class="bg-gray-200 rounded-xl overflow-hidden shadow-2xl group flex flex-col w-full max-w-[250px] mx-auto"
+      class="bg-gray-200 rounded-xl overflow-hidden shadow-2xl group flex flex-col w-full max-w-[250px] mx-auto dark:bg-gray-800"
     >
       <div class="overflow-hidden relative">
         <img
@@ -272,8 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
         >${product.comfort}</span>
       </div>
       <div class="p-5 flex flex-col grow">
-        <h3 class="text-xl font-bold text-gray-900 mb-1">${product.name}</h3>
-        <p class="text-gray-700 text-lg font-medium mb-3">$${product.price}</p>
+        <h3 class="text-xl font-bold text-gray-900 mb-1 dark:text-white">${product.name}</h3>
+        <p class="text-gray-700 text-lg font-medium mb-3 dark:text-white">$${product.price}</p>
       </div>
       <div class="mt-auto space-y-3">
         <button
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <button
           onclick="productModal(${product.id})"
-          class="w-full py-3 text-cyan-600 border border-cyan-500 font-semibold rounded-xl hover:bg-cyan-500 hover:text-gray-100 transi duration-150 shadow-lg active:scale-[0.98]"
+          class="w-full py-3 text-cyan-600 border border-cyan-500 font-semibold rounded-xl hover:bg-cyan-500 hover:text-gray-100 transi duration-150 shadow-lg active:scale-[0.98] dark:text-cyan-100"
         >
           Product Details
         </button>

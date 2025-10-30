@@ -16,3 +16,5 @@
     font-family: var(--font-dmsans);
   }
 }
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
