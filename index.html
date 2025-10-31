@@ -575,27 +575,27 @@
     <!-- Cart Modal -->
     <div
       id="cart-modal"
-      class="fixed hidden z-50 inset-0 bg-gray-100/50 overflow-y-auto backdrop-blur-sm dark:bg-gray-900/50 text-black dark:text-white"
+      class="fixed hidden z-50 inset-0 bg-gray-100/50 overflow-y-auto backdrop-blur-sm dark:bg-gray-900/50"
     >
       <div class="flex justify-center items-center min-h-screen p-4">
         <div
-          class="bg-white rounded-xl shadow-2xl max-w-3xl w-full transform transition-all duration-300 overflow-hidden"
+          class="bg-white dark:bg-gray-700 rounded-xl shadow-2xl max-w-3xl w-full transform transition-all duration-300 overflow-hidden"
         >
           <div class="p-6 md:p-8">
             <!-- Cart Header & Close Button -->
             <div
-              class="flex justify-between items-center border-b border-gray-300 pb-4 mb-6"
+              class="flex justify-between items-center border-b border-gray-300 pb-4 mb-6 dark:border-gray-600"
             >
               <h2
                 id="cart-modal-title"
-                class="text-3xl text-gray-900 font-bold"
+                class="text-3xl text-gray-900 dark:text-white font-bold"
               >
                 Your Shopping List
               </h2>
               <button
                 id="close-cart-button"
                 onclick="hideCartModal()"
-                class="focus:outline-none cursor-pointer text-black hover:text-cyan-500"
+                class="focus:outline-none cursor-pointer text-black hover:text-cyan-500 dark:text-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -615,7 +615,10 @@
             </div>
 
             <!-- Cart Items Container -->
-            <div id="cart-items-list" class="space-y-4 mb-8 min-h-[100px]">
+            <div
+              id="cart-items-list"
+              class="space-y-4 mb-8 min-h-[100px] text-gray-500 dark:text-white"
+            >
               <p class="text-xl text-center text-gray-500">
                 Your cart is currently empty.
               </p>
@@ -624,13 +627,13 @@
             <!-- Cart Summary with Total and Checkout Button -->
             <div id="cart-summary" class="border-t pt-4 border-gray-300">
               <div class="flex justify-between font-semibold text-lg mb-2">
-                <span class="text-xl font-bold text-gray-900"
+                <span class="text-xl font-bold text-gray-900 dark:text-white"
                   >Total Items:</span
                 >
                 <span id="cart-total-items" class="text-cyan-500">0</span>
               </div>
               <div class="flex justify-between font-extrabold text-2xl mb-6">
-                <span class="text-xl font-bold text-gray-900"
+                <span class="text-xl font-bold text-gray-900 dark:text-white"
                   >Grand Total:</span
                 >
                 <span id="cart-grand-total" class="text-cyan-500">$0.00</span>
