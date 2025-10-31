@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn AirRunner Pro",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/e_gen_recolor:prompt_(background);to-color_C2C9D6;multiple_true/w_250/q_auto/f_auto/v1760453320/shoes-10_rj6uyt.jpg",
       price: 120,
-      comfort: 5,
+      comfort: 5/5,
       description: "Lightweight running shoes designed for speed and breathability."
     },
     {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn Velocity Max",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/e_gen_recolor:prompt_(background);to-color_C2C9D6;multiple_true/w_250/q_auto/f_auto/v1760453320/shoes-18_eeioaq.jpg",
       price: 130,
-      comfort: 4,
+      comfort: 4/5,
       description: "Cushioned sole with adaptive traction for all terrains."
     },
     {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn AeroFlex",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/e_gen_recolor:prompt_(background);to-color_C2C9D6;multiple_true/w_250/q_auto/f_auto/v1760453320/shoes-9_ip9zse.jpg",
       price: 115,
-      comfort: 5,
+      comfort: 5/5,
       description: "Mesh upper with superior airflow for long-distance runs."
     },
     {
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn SwiftEdge",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642148/shoes-17_ozo9jo.jpg",
       price: 125,
-      comfort: 4, 
+      comfort: 4/5, 
       description: "Responsive midsole with high-rebound foam for quick sprints."
     },
     {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn TurboTrail",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642155/shoes-12_lg8ljy.jpg",
       price: 135,
-      comfort: 3,
+      comfort: 3/5,
       description: "Rugged outsole perfect for trail and mountain runners."
     },
     {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn GlideSport",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642156/shoes-13_qjpxpp.jpg",
       price: 110,
-      comfort: 5,
+      comfort: 5/5,
       description: "Flexible design with arch support for everyday training."
     },
     {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn Enduro Pro",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642151/shoes-11_xuot4t.jpg",
       price: 140,
-      comfort: 4,
+      comfort: 4/5,
       description: "Built for endurance athletes with shock-absorbing soles."
     },
     {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn SprintFlow",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761649281/shoes-26_mrlnxv.jpg",
       price: 100,
-      comfort: 3,
+      comfort: 3/5,
       description: "Minimalist design focused on performance and lightness."
     }
   ],
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn CloudEase",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453335/shoes-8_ncy9dy.jpg",
       price: 90,
-      comfort: 5,
+      comfort: 5/5,
       description: "Plush memory foam insole for cloud-like comfort."
     },
     {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn CozyWalk",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453326/shoes-4_mui2j5.jpg",
       price: 85,
-      comfort: 4,
+      comfort: 4/5,
       description: "Breathable cotton-linen blend ideal for casual days."
     },
     {
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn RelaxFit",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453320/shoes-5_rxmjen.jpg",
       price: 95,
-      comfort: 5,
+      comfort: 5/5,
       description: "Designed to reduce foot pressure and enhance support."
     },
     {
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn SoftStride",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453322/shoes-7_bqimof.jpg",
       price: 80,
-      comfort: 4,
+      comfort: 4/5,
       description: "Ergonomic midsole ideal for long hours of standing."
     },
     {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn BlissSlip",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453327/shoes-2_y0bx27.jpg",
       price: 75,
-      comfort: 5,
+      comfort: 5/5,
       description: "Easy slip-on design with ultra-soft inner lining."
     },
     {
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn Everyday",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761649265/shoes-23_ygsb3o.jpg",
       price: 70,
-      comfort: 4,
+      comfort: 4/5,
       description: "Lightweight, flexible shoes for everyday wear."
     },
     {
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn LoungeStep",
       image: "comfort-shoe-7.jpg",
       price: 85,
-      comfort: 5,
+      comfort: 5/5,
       description: "Luxurious comfort for relaxed weekends and casual walks."
     },
     {
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn CushionLite",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642148/shoes-20_fhb7i9.jpg",
       price: 90,
-      comfort: 5,
+      comfort: 5/5,
       description: "Dual-density cushioning that adapts to every step."
     }
   ],
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn Elegance",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453327/shoes-6_tmh3v8.jpg",
       price: 110,
-      comfort: 4,
+      comfort: 4/5,
       description: "Sleek modern design for formal and semi-casual events."
     },
     {
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn LuxeHeels",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642151/shoes-22_ouqble.jpg",
       price: 130,
-      comfort: 3,
+      comfort: 3/5,
       description: "Stylish high heels with soft footbed padding."
     },
     {
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn MetroWalk",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642149/shoes-16_hz1e3n.jpg",
       price: 105,
-      comfort: 4,
+      comfort: 4/5,
       description: "Trendy sneakers for urban lifestyle and streetwear."
     },
     {
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn UrbanChic",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761649299/shoes-27_qfczra.jpg",
       price: 95,
-      comfort: 5,
+      comfort: 5/5,
       description: "Minimalist slip-ons for fashion-forward comfort."
     },
     {
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn Classic",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761642142/shoes-15_edxdkj.jpg",
       price: 120,
-      comfort: 4,
+      comfort: 4/5,
       description: "Timeless leather design that complements any outfit."
     },
     {
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn Grace",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1760453331/shoes-3_z2nvzw.jpg",
       price: 115,
-      comfort: 3,
+      comfort: 3/5,
       description: "Elegant low heels for graceful steps all day."
     },
     {
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn TrendFlex",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761649270/shoes-25_bauojm.jpg",
       price: 100,
-      comfort: 4,
+      comfort: 4/5,
       description: "Blends fashion with flexibility for all-day style."
     },
     {
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: "StepIn NoirEdge",
       image: "https://res.cloudinary.com/drfbfalpr/image/upload/w_250/q_auto/f_auto/v1761649289/shoes-24_ogstrc.jpg",
       price: 125,
-      comfort: 3,
+      comfort: 3/5,
       description: "Black designer shoes with a bold, modern look."
     }
   ]
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
         />
         <span
           class="absolute top-3 right-3 text-sm font-bold text-gray-700 px-3 py-1 rounded-full bg-cyan-400 shadow-md"
-        >${product.comfort}</span>
+        >${product.comfort} Comfort</span>
       </div>
       <div class="p-5 flex flex-col grow">
         <h3 class="text-xl font-bold text-gray-900 mb-1 dark:text-white">${product.name}</h3>
