@@ -6,18 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartModal = document.getElementById("cart-modal");
   const closeCartBtn = document.getElementById("close-cart-button");
 
-
-  function showSidebar() {
-    sidebar.classList.remove('hidden');
-  }
-  
-  function hideSidebar() {
-    sidebar.classList.add('hidden')
-  }
-
-
-  
-
   // Shop Section Tab Layout
   const categories = document.querySelectorAll('[data-tab-target]');
   const activeClass = "text-cyan-500 border-b-2 border-cyan-500 hover:text-cyan-600 dark:text-cyan-400 dark:border-cyan-400 dark:hover:text-cyan-300";
@@ -327,6 +315,14 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCart();
 });
 
+function showSidebar() {
+    sidebar.classList.remove('hidden');
+  }
+  
+  function hideSidebar() {
+    sidebar.classList.add('hidden')
+  }
+
 // Cart Modal
   let cart = [];
 
@@ -384,4 +380,69 @@ document.addEventListener('DOMContentLoaded', () => {
       cartModal.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
     }
+  }
+
+  // Helper function to get product details by ID
+  function getProductById(id) {
+    for (const category in products) {
+      const product = products[category].find(p => p.id === id);
+      if (product) return product;
+    }
+    return null;
+  }
+
+  function addToCart(productId, productName) {
+    const productDetails = getProductById(productId);
+
+    if (!productDetails) {
+      console.error(`Attempted to add unknown product ID: ${productId}`);
+      return;
+    }
+
+    // This checks if an item already exists in the cart
+    const existingItem = cart.find(item => item.productId === productId);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        productId: productId,
+        name: productName,
+        quantity: 1,
+        price: productDetails.price
+      });
+    }
+
+    renderCart();
+    console.log(`${productName} added to cart. Current cart:`, cart)
+
+    alert(`Successfully added ${productName} to your cart!`);
+
+    hideProductModal();
+  }
+
+  function createCartItemHtml(item) {
+    const itemTotal = (item.price * item.quantity).toFixed(2);
+    const formattedPrice = item.price.toFixed(2);
+
+    return `
+    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg shadow-sm">
+      <div class="flex-grow">
+        <p class="font-semibold text-gray-900">${item.name}</p>
+        <p class="text-sm text-gray-600">$${formattedPrice} x ${item.quantity}</p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="font-bold text-lg text-brand-blue">$${itemTotal}</span>
+        <button 
+          onclick="removeItemFromCart(${item.productId})"
+          class="text-red-500 hover:text-red-700 transition duration-150"
+          aria-label="Remove ${item.name} from cart"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.86 12.14A2 2 0 0116.14 21H7.86a2 2 0 01-1.99-1.86L5 7m5 4v6m4-6v6M1 7h22" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    `;
   }
