@@ -30,7 +30,7 @@
         <!-- Logo -->
         <button
           id="close-button"
-          class="order-1 lg:hidden text-4xl px-6 pt-2 h-[50px] cursor-pointer hover:text-cyan-500"
+          class="order-1 text-4xl px-6 pt-2 h-[50px] cursor-pointer hover:text-cyan-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,35 +156,34 @@
             >
           </li>
         </div>
-        <div class="icons flex flex-row gap-6 order-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 cursor-pointer hover:text-cyan-500 hidden md:block text-black dark:text-white"
+        <div class="icons flex flex-row gap-4 order-3">
+          <button
+            id="cart-icon-btn"
+            onclick="showCartModal()"
+            class="relative p-2 rounded-full text-white focus:outline-none cursor-pointer"
+            aria-label="View shopping cart"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 cursor-pointer hover:text-cyan-500 text-black dark:text-white"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-            />
-          </svg>
+            <svg
+              class="size-6 text-2xl cursor-pointer hover:text-cyan-500 text-black dark:text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <!-- Cart Count Badge -->
+            <span
+              id="cart-count"
+              class="absolute -bottom-5 -right-1 bg-cyan-600 inline-block size-6 text-md font-bold rounded-full"
+            >
+              0
+            </span>
+          </button>
         </div>
       </ul>
     </nav>
@@ -570,5 +569,80 @@
         </p>
       </div>
     </footer>
+
+    <!-- Cart Modal -->
+    <div
+      id="cart-modal"
+      class="fixed hidden z-50 inset-0 bg-gray-100/50 overflow-y-auto backdrop-blur-sm dark:bg-gray-900/50 text-black dark:text-white"
+    >
+      <div class="flex justify-center items-center min-h-screen p-4">
+        <div
+          class="bg-white rounded-xl shadow-2xl max-w-3xl w-full transform transition-all duration-300 overflow-hidden"
+        >
+          <div class="p-6 md:p-8">
+            <!-- Cart Header & Close Button -->
+            <div
+              class="flex justify-between items-center border-b border-gray-300 pb-4 mb-6"
+            >
+              <h2
+                id="cart-modal-title"
+                class="text-3xl text-gray-900 font-bold"
+              >
+                Your Shopping List
+              </h2>
+              <button
+                id="close-cart-button"
+                onclick="hideCartModal()"
+                class="focus:outline-none cursor-pointer text-black hover:text-cyan-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-8 w-8"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div id="cart-items-list" class="space-y-4 mb-8 min-h-[100px]">
+              <p class="text-xl text-center text-gray-500">
+                Your cart is currently empty.
+              </p>
+            </div>
+
+            <!-- Cart Summary with Total and Checkout Button -->
+            <div id="cart-summary" class="border-t pt-4 border-gray-300">
+              <div class="flex justify-between font-semibold text-lg mb-2">
+                <span class="text-xl font-bold text-gray-900"
+                  >Total Items:</span
+                >
+                <span id="cart-total-items" class="text-cyan-500">0</span>
+              </div>
+              <div class="flex justify-between font-extrabold text-2xl mb-6">
+                <span class="text-xl font-bold text-gray-900"
+                  >Grand Total:</span
+                >
+                <span id="cart-grand-total" class="text-cyan-500">$0.00</span>
+              </div>
+              <button
+                id="checkout-button"
+                class="w-full mt-6 bg-cyan-500 text-white py-6 rounded-md hover:bg-cyan-600 transition font-extrabold text-xl"
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

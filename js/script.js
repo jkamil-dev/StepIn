@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("close-button");
   const menuBtn = document.getElementById("menu-button");
-  
+  const cartModal = document.getElementById("cart-modal");
+  const closeCartBtn = document.getElementById("close-cart-button");
+
+
   function showSidebar() {
     sidebar.classList.remove('hidden');
   }
@@ -11,11 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function hideSidebar() {
     sidebar.classList.add('hidden')
   }
-  
-  menuBtn.addEventListener("click", showSidebar);
-  closeBtn.addEventListener("click", hideSidebar);
-  sidebar.addEventListener("click", hideSidebar);
 
+
+  
 
   // Shop Section Tab Layout
   const categories = document.querySelectorAll('[data-tab-target]');
@@ -308,7 +309,79 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+
+  if (closeCartBtn) {
+    closeCartBtn.addEventListener('click', hideCartModal);
+  }
+  if (cartModal) {
+    cartModal.addEventListener('click', (e) => {
+      if (e.target === cartModal) {
+        hideCartModal();
+      }
+    });
+  }
+
   renderProducts('athletics');
   renderProducts('comfort');
   renderProducts('fashion');
-})
+  renderCart();
+});
+
+// Cart Modal
+  let cart = [];
+
+  // Add to Cart Function
+  function renderCart() {
+    const cartList = document.getElementById('cart-items-list');
+    const cartCountBadge = document.getElementById('cart-count');
+    const cartTotalItems = document.getElementById('cart-total-items');
+    const cartGrandTotal = document.getElementById('cart-grand-total');
+
+    if (!cartList || !cartCountBadge || !cartTotalItems || !cartGrandTotal) {
+      console.error('Missing one or more cart rendering elements.');
+      return;
+    }
+
+    let totalItems = 0;
+    let GrandTotal = 0;
+    let cartHtml = '';
+
+    if (cart.length === 0) {
+      cartHtml = '<p class="text-gray-500 text-center py-4">Your cart is currently empty.</p>';
+    } else {
+      cart.forEach(item => {
+        cartHtml += createCartItemHtml(item);
+        totalItems += item.quantity;
+        GrandTotal += item.price * item.quantity;
+      });
+    }
+
+    cartList.innerHTML = cartHtml;
+    cartCountBadge.textContent = totalItems;
+    cartTotalItems.textContent = totalItems;
+    cartGrandTotal.textContent = `$${GrandTotal.toFixed(2)}`;
+  }
+
+  function removeItemFromCart(productId) {
+    cart = cart.filter(item => item.productId !== productId);
+    renderCart();
+  }
+
+  // Display Cart Modal
+  function showCartModal() {
+    const cartModal = document.getElementById('cart-modal');
+    if (cartModal) {
+      renderCart();
+      cartModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+  }
+
+  // Hide Cart Modal
+  function hideCartModal() {
+    const cartModal = document.getElementById('cart-modal');
+    if (cartModal) {
+      cartModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
