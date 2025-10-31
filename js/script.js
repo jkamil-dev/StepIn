@@ -1,69 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Navbar
-  const sidebar = document.getElementById("sidebar");
-  const closeBtn = document.getElementById("close-button");
-  const menuBtn = document.getElementById("menu-button");
-  const cartModal = document.getElementById("cart-modal");
-  const closeCartBtn = document.getElementById("close-cart-button");
 
-  // Shop Section Tab Layout
-  const categories = document.querySelectorAll('[data-tab-target]');
-  const activeClass = "text-cyan-500 border-b-2 border-cyan-500 hover:text-cyan-600 dark:text-cyan-400 dark:border-cyan-400 dark:hover:text-cyan-300";
-
-  // This sets the first tab as active on page load
-  categories[0].classList.add(...activeClass.split(' '));
-  document.querySelector('#comfort').classList.add('hidden');
-  document.querySelector('#fashion').classList.add('hidden');
-
-  // This adds click event listeners to each tab
-  categories.forEach(cat => {
-    cat.addEventListener('click', () => {
-      const target = document.querySelector(cat.dataset.tabTarget);
-      // console.log(target);
-
-      // Hide all tab contents and remove active classes from all tabs
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.add('hidden');
-      });
-
-      // Remove the hidden class from the clicked tab-content
-      target.classList.remove('hidden');
-
-      // Add the active class to only the clicked tab and remove from others
-      categories.forEach(t => {
-        t.classList.remove(...activeClass.split(' '));
-      });
-
-      cat.classList.add(...activeClass.split(' '));
-    });
-  });
-
-  
-
-  if (closeCartBtn) {
-    closeCartBtn.addEventListener('click', hideCartModal);
-  }
-  if (cartModal) {
-    cartModal.addEventListener('click', (e) => {
-      if (e.target === cartModal) {
-        hideCartModal();
-      }
-    });
-  }
-
-  renderProducts('athletics');
-  renderProducts('comfort');
-  renderProducts('fashion');
-  renderCart();
-});
-
-  function showSidebar() {
-    sidebar.classList.remove('hidden');
-  }
-  
-  function hideSidebar() {
-    sidebar.classList.add('hidden')
-  }
 
   // Product Card Render
   const products = {
@@ -300,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
 
         <button
-          onclick="productModal(${product.id})"
+          onclick="showProductModal(${product.id})"
           class="w-full py-3 text-cyan-600 border border-cyan-500 font-semibold rounded-xl hover:bg-cyan-500 hover:text-gray-100 transi duration-150 shadow-lg active:scale-[0.98] dark:text-cyan-100"
         >
           Product Details
@@ -445,4 +380,139 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
     `;
+  }
+
+  // Product Details Modal
+  function generateProductModal(product) {
+    if (!product) {
+      return `<p class="text-gray-500 text-center">Error: Product not found.</p>`;
+    }
+
+    return `
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+        <div>
+          <img src="${product.image}" alt="${product.name}" class="w-full h-[200px] object-cover md:h-[400px] rounded-lg shadow-xl"
+            onerror="this.onerror=null;this.src='https://placehold.co/800x600/94A3B8/ffffff?text=Product+Image';"
+            >
+        </div>
+        
+        <div>
+          <h2 id="modal-title" class="text-3xl font-extrabold dark:text-white text-gray-900 mb-2">${product.name}</h2>
+          <p class="text-2xl text-cyan-500 dark:text-cyan-400 mb-1.5 font-bold sm:mb-4">$${product.price}</p>
+          
+          <div class="flex items-center gap-1 text-sm mb-2.5 sm:mb-6">
+            <span class="font-semibold text-gray-700 dark:text-white">Comfort Rating:</span>
+            <span class="px-3 py-1 rounded-full bg-cyan-500 text-white font-bold">${product.comfort}</span>
+            <span class="text-black dark:text-white">|</span>
+            <span class="text-gray-600 dark:text-white ml-1">Free Shipping</span>
+          </div>
+
+          <p class="text-gray-700 dark:text-white leading-relaxed mb-2.5 sm:mb-6">${product.description}</p>
+          
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Select Size:</h4>
+          <div class="flex gap-3 mb-3 sm:mb-8">
+            <span class="cursor-pointer border border-gray-300 dark:border-gray-500 text-black dark:text-gray-300 rounded-lg px-4 py-2 hover:border-cyan-500 transition duration-150">9</span>
+            <span class="cursor-pointer border border-gray-300 dark:border-gray-500 rounded-lg px-4 py-2 bg-cyan-500 text-white font-semibold">10</span>
+            <span class="cursor-pointer border dark:border-gray-500 text-black dark:text-gray-300 border-gray-300 rounded-lg px-4 py-2 hover:border-cyan-500 transition duration-150">11</span>
+          </div>
+          
+          <button 
+            onclick="addToCart(${product.id}, '${product.name}')" 
+            class="w-full mt-2 sm:mt-6 bg-cyan-500 text-white py-3 sm:py-6 rounded-md hover:bg-cyan-600 transition font-extrabold text-xl cursor-pointer shadow-lg active:scale-[0.98]"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  // Show Product Modal
+  function showProductModal(productId) {
+    const product = getProductById(productId);
+    const productModal = document.getElementById('product-modal');
+    const modalContent = document.getElementById('product-modal-body');
+
+    if (product && productModal && modalContent) {
+      modalContent.innerHTML = generateProductModal(product);
+      productModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    } else {
+      console.error(`Product modal elements missing or product not found for ID: ${productId}`);
+    }
+  }
+
+  // Hide Product Modal
+  function hideProductModal() {
+    const productModal = document.getElementById('product-modal');
+    if (productModal) {
+      productModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
+
+  // Document Ready
+  document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById("sidebar");
+  const cartModal = document.getElementById("cart-modal");
+  const closeCartBtn = document.getElementById("close-cart-button");
+
+  // Shop Section Tab Layout
+  const categories = document.querySelectorAll('[data-tab-target]');
+  const activeClass = "text-cyan-500 border-b-2 border-cyan-500 hover:text-cyan-600 dark:text-cyan-400 dark:border-cyan-400 dark:hover:text-cyan-300";
+
+  // This sets the first tab as active on page load
+  categories[0].classList.add(...activeClass.split(' '));
+  document.querySelector('#comfort').classList.add('hidden');
+  document.querySelector('#fashion').classList.add('hidden');
+
+  // This adds click event listeners to each tab
+  categories.forEach(cat => {
+    cat.addEventListener('click', () => {
+      const target = document.querySelector(cat.dataset.tabTarget);
+      // console.log(target);
+
+      // Hide all tab contents and remove active classes from all tabs
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Remove the hidden class from the clicked tab-content
+      target.classList.remove('hidden');
+
+      // Add the active class to only the clicked tab and remove from others
+      categories.forEach(t => {
+        t.classList.remove(...activeClass.split(' '));
+      });
+
+      cat.classList.add(...activeClass.split(' '));
+    });
+  });
+
+  
+
+  if (closeCartBtn) {
+    closeCartBtn.addEventListener('click', hideCartModal);
+  }
+  if (cartModal) {
+    cartModal.addEventListener('click', (e) => {
+      if (e.target === cartModal) {
+        hideCartModal();
+      }
+    });
+  }
+
+  renderProducts('athletics');
+  renderProducts('comfort');
+  renderProducts('fashion');
+  renderCart();
+});
+
+// Sidebar Toggle
+  function showSidebar() {
+    sidebar.classList.remove('hidden');
+  }
+  
+  function hideSidebar() {
+    sidebar.classList.add('hidden')
   }

@@ -25,6 +25,7 @@
       <!-- Sidebar Navigation Bar -->
       <ul
         id="sidebar"
+        onclick="hideSidebar()"
         class="fixed hidden h-screen top-0 left-0 flex-col w-[250px] items-center justify-start z-10 bg-gray-100/50 max-[400px]:w-full shadow-2xl backdrop-blur-sm dark:bg-gray-900/50 text-black dark:text-white"
       >
         <!-- Logo -->
@@ -181,7 +182,7 @@
             <!-- Cart Count Badge -->
             <span
               id="cart-count"
-              class="absolute -bottom-5 -right-1 bg-cyan-600 inline-block size-6 text-md font-bold rounded-full"
+              class="absolute -bottom-2 -right-0.5 bg-cyan-600 inline-block size-6 text-md font-bold rounded-full"
             >
               0
             </span>
@@ -652,6 +653,52 @@
               >
                 Proceed to Checkout
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div
+      id="product-modal"
+      class="fixed hidden z-50 inset-0 bg-gray-100/50 overflow-y-auto backdrop-blur-sm dark:bg-gray-900/50"
+    >
+      <div class="flex justify-center items-center min-h-screen p-4">
+        <div
+          id="modal-content-area"
+          class="bg-gray-100 dark:bg-gray-700 rounded-xl shadow-2xl max-w-3xl w-full transform transition-all duration-300"
+        >
+          <!-- Close Details Button -->
+          <div class="flex justify-end p-4">
+            <button
+              id="close-details-button"
+              onclick="hideProductModal()"
+              class="focus:outline-none cursor-pointer text-black hover:text-cyan-500 dark:text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-8 w-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Product Modal Content will be injected here -->
+          <div class="p-6 md:p-8">
+            <div id="product-modal-body" class="p-6 md:p-10">
+              <p class="text-center text-gray-500">
+                Loading product details...
+              </p>
             </div>
           </div>
         </div>
