@@ -38,6 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  
+
+  if (closeCartBtn) {
+    closeCartBtn.addEventListener('click', hideCartModal);
+  }
+  if (cartModal) {
+    cartModal.addEventListener('click', (e) => {
+      if (e.target === cartModal) {
+        hideCartModal();
+      }
+    });
+  }
+
+  renderProducts('athletics');
+  renderProducts('comfort');
+  renderProducts('fashion');
+  renderCart();
+});
+
+  function showSidebar() {
+    sidebar.classList.remove('hidden');
+  }
+  
+  function hideSidebar() {
+    sidebar.classList.add('hidden')
+  }
+
   // Product Card Render
   const products = {
   athletics: [
@@ -298,31 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (closeCartBtn) {
-    closeCartBtn.addEventListener('click', hideCartModal);
-  }
-  if (cartModal) {
-    cartModal.addEventListener('click', (e) => {
-      if (e.target === cartModal) {
-        hideCartModal();
-      }
-    });
-  }
-
-  renderProducts('athletics');
-  renderProducts('comfort');
-  renderProducts('fashion');
-  renderCart();
-});
-
-function showSidebar() {
-    sidebar.classList.remove('hidden');
-  }
-  
-  function hideSidebar() {
-    sidebar.classList.add('hidden')
-  }
-
 // Cart Modal
   let cart = [];
 
@@ -416,9 +418,7 @@ function showSidebar() {
     renderCart();
     console.log(`${productName} added to cart. Current cart:`, cart)
 
-    alert(`Successfully added ${productName} to your cart!`);
-
-    hideProductModal();
+    // alert(`Successfully added ${productName} to your cart!`);
   }
 
   function createCartItemHtml(item) {
