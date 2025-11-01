@@ -295,6 +295,7 @@
     cartGrandTotal.textContent = `$${GrandTotal.toFixed(2)}`;
   }
 
+  // Remove Item from Cart
   function removeItemFromCart(productId) {
     cart = cart.filter(item => item.productId !== productId);
     renderCart();
@@ -361,13 +362,13 @@
     const formattedPrice = item.price.toFixed(2);
 
     return `
-    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg shadow-sm">
+    <div class="flex items-center justify-between p-3 bg-gray-50  dark:bg-gray-800 rounded-lg shadow-sm">
       <div class="flex-grow">
-        <p class="font-semibold text-gray-900">${item.name}</p>
-        <p class="text-sm text-gray-600">$${formattedPrice} x ${item.quantity}</p>
+        <p class="font-semibold text-gray-900 dark:text-white">${item.name}</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">$${formattedPrice} x ${item.quantity}</p>
       </div>
       <div class="flex items-center space-x-4">
-        <span class="font-bold text-lg text-brand-blue">$${itemTotal}</span>
+        <span class="font-bold text-lg text-black dark:text-white">$${itemTotal}</span>
         <button 
           onclick="removeItemFromCart(${item.productId})"
           class="text-red-500 hover:text-red-700 transition duration-150"
